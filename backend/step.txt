@@ -1,0 +1,2 @@
+env-- used to hide the credentials information. we stroed all credentials informatione here and export to file.
+Instant_chat_app - mongobd project name
