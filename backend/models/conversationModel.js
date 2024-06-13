@@ -12,4 +12,4 @@ const conversationModel=new mongoose.Schema({
     }]
 },{timestamps:true});
 
-export const conversation=mongoose.model("Conversation",conversationModel);
+export const conversation=mongoose.model("conversation",conversationModel);
