@@ -63,7 +63,7 @@ const Sidebar = () => {
                     <img src={AuthUser?.profilePhoto} alt="user-profile" />
                 </div>
                 <div>
-                    <p>{AuthUser?.fullName}</p>
+                    <p>{AuthUser?.fullName}</p>k
                 </div>
 
             </div>
