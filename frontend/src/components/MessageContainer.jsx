@@ -8,9 +8,7 @@ const MessageContainer = () => {
     const { selectedUser, authUser, onlineUsers } = useSelector(store => store.user);
     const dispatch = useDispatch();
 
-    useEffect(()=>{
-        return ()=> dispatch(setSelectedUser(null));
-    },[]);
+    
 
     const isOnline = onlineUsers?.includes(selectedUser?._id);
    
