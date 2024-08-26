@@ -8,6 +8,7 @@ const Message = ({message}) => {
     useEffect(()=>{
         scroll.current?.scrollIntoView({behavior:"smooth"});
     },[message]);
+    const formattedTime = new Date(message?.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
     
     return (
         <div ref={scroll} className={`chat ${message?.senderId === authUser?._id ? 'chat-end' : 'chat-start'}`}>
@@ -17,7 +18,7 @@ const Message = ({message}) => {
                 </div>
             </div>
             <div className="chat-header">
-                <time className="text-xs opacity-50 text-white">12:45</time>
+                <time className="text-xs opacity-50 text-white">{formattedTime}</time>
             </div>
             <div className={`chat-bubble ${message?.senderId !== authUser?._id ? 'bg-gray-200 text-black' : ''} `}>{message?.message}</div>
         </div>
