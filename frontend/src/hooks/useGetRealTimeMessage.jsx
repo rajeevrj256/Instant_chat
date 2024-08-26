@@ -8,7 +8,7 @@ const useGetRealTimeMessage = () => {
     const {messages} = useSelector(store=>store.message);
     const dispatch = useDispatch();
     useEffect(()=>{
-        axios.defaults.withCredentials = true;
+        //axios.defaults.withCredentials = true;
         socket?.on("newMessage", (newMessage)=>{
             dispatch(setMessages([...messages, newMessage]));
         });
