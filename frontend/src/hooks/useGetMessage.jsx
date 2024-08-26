@@ -1,3 +1,4 @@
+/* eslint-disable */
 import  { useEffect } from 'react'
 import axios from "axios";
 import {useSelector,useDispatch} from "react-redux";
@@ -18,7 +19,7 @@ const useGetMessages = () => {
             }
         }
         fetchMessages();
-    }, [selectedUser?._id,dispatch]);
+    }, [selectedUser?._id,setMessages]);
 }
 
 export default useGetMessages
